@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
     
-    // Add fade-in animation for service cards
+    // Add fade-in animation for credential items
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
-    // Observe service cards and other elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .credential-item');
+
+    // Observe credential items for animation
+    const animatedElements = document.querySelectorAll('.credential-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

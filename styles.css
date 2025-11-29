@@ -352,22 +352,23 @@ p {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* Services Section */
-.services {
+
+/* Approach Section */
+.approach {
     padding: 80px 0;
     background: #f8f6f3;
     position: relative;
     overflow: hidden;
 }
 
-.services::before {
+.approach::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 15% 25%, rgba(139, 69, 19, 0.12) 1.5px, transparent 1.5px),
         radial-gradient(circle at 85% 75%, rgba(135, 206, 235, 0.1) 2px, transparent 2px),
         radial-gradient(circle at 50% 10%, rgba(139, 69, 19, 0.08) 1px, transparent 1px),
@@ -380,66 +381,21 @@ p {
     z-index: 1;
 }
 
-.services h2 {
-    text-align: center;
-    color: #2c2c2c;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.service-card h3 {
-    color: #8B4513;
-    margin-bottom: 1rem;
-}
-
-.service-card p {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Approach Section */
-.approach {
-    padding: 80px 0;
-    background: white;
-}
-
 .approach-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
 .approach-text {
     max-width: 800px;
     width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .approach-text h2 {
@@ -635,7 +591,7 @@ p {
     .credentials {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
     }
@@ -668,11 +624,7 @@ p {
     .section-header h1 {
         font-size: 1.8rem;
     }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
+
     .hero-buttons {
         width: 100%;
     }
